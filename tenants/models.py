@@ -168,6 +168,75 @@ class Domain(DomainMixin):
                 raise ValidationError({
                     'domain': 'Domain يجب أن يكون hostname فقط بدون port (مثال: tmco.localhost وليس tmco.localhost:8000)'
                 })
+    
+    def save(self, *args, **kwargs):
+        """حفظ Domain وإنشاء Admin User تلقائياً"""
+        is_new = self.pk is None
+        super().save(*args, **kwargs)
+        
+        # إنشاء Admin User تلقائياً عند إنشاء Domain رئيسي جديد
+        if is_new and self.is_primary:
+            self._create_default_admin_user()
+    
+    def _create_default_admin_user(self):
+        """إنشاء مستخدم Admin افتراضي في tenant schema"""
+        from django.contrib.auth import get_user_model
+        from django_tenants.utils import tenant_context
+        from django.db import connection
+        import time
+        
+        User = get_user_model()
+        tenant = self.tenant
+        domain = self.domain
+        
+        # التأكد من أن Schema موجود (قد يحتاج وقت للإنشاء)
+        # في django-tenants، auto_create_schema=True ينشئ Schema تلقائياً عند حفظ Client
+        # لكن قد يحتاج وقت، خاصة في الإنتاج
+        
+        # محاولة إنشاء Admin User مع retry
+        max_retries = 5
+        retry_delay = 0.5
+        
+        for attempt in range(max_retries):
+            try:
+                # محاولة الوصول إلى tenant schema
+                # tenant_context سيحاول إنشاء Schema إذا لم يكن موجوداً
+                with tenant_context(tenant):
+                    # التحقق من عدم وجود مستخدم admin بالفعل
+                    if not User.objects.filter(username='admin').exists():
+                        # إنشاء Admin User
+                        admin_user = User.objects.create_user(
+                            username='admin',
+                            email=tenant.email or f'admin@{domain.split(".")[0]}.com',
+                            password='admin123',
+                            full_name='مدير النظام',
+                            is_staff=True,
+                            is_superuser=True,
+                            role='owner'
+                        )
+                        return True  # نجح
+                    else:
+                        return True  # موجود بالفعل
+            except Exception as e:
+                error_msg = str(e)
+                # إذا كان الخطأ متعلقاً بـ Schema غير موجود، انتظر وحاول مرة أخرى
+                if 'schema' in error_msg.lower() or 'does not exist' in error_msg.lower():
+                    if attempt < max_retries - 1:
+                        # انتظر قليلاً ثم حاول مرة أخرى
+                        time.sleep(retry_delay)
+                        retry_delay *= 1.5
+                        continue
+                
+                # فشلت جميع المحاولات أو خطأ آخر - سجل الخطأ
+                if attempt == max_retries - 1:
+                    import logging
+                    logger = logging.getLogger(__name__)
+                    logger.error(
+                        f'فشل إنشاء Admin User للعميل {tenant.name} بعد {max_retries} محاولات: {error_msg}',
+                        exc_info=True
+                    )
+                    return False
+        return False
 
 
 # ==========================================

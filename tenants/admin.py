@@ -102,7 +102,7 @@ class DomainAdmin(admin.ModelAdmin):
     search_fields = ('domain', 'tenant__name')
     
     def save_model(self, request, obj, form, change):
-        """تنظيف Domain قبل الحفظ - يجب أن يكون hostname فقط وليس URL"""
+        """تنظيف Domain قبل الحفظ"""
         import re
         from urllib.parse import urlparse
         
@@ -132,7 +132,39 @@ class DomainAdmin(admin.ModelAdmin):
             )
         
         obj.domain = domain
+        
+        # حفظ Domain (سيتم إنشاء Admin User تلقائياً من Domain.save())
         super().save_model(request, obj, form, change)
+        
+        # عرض رسالة نجاح بعد إنشاء Domain
+        if not change and obj.is_primary:
+            # التحقق من وجود Admin User
+            from django_tenants.utils import tenant_context
+            from django.contrib.auth import get_user_model
+            User = get_user_model()
+            
+            try:
+                with tenant_context(obj.tenant):
+                    if User.objects.filter(username='admin').exists():
+                        messages.success(
+                            request,
+                            f'✅ تم إنشاء Domain ومستخدم Admin تلقائياً:\n'
+                            f'   اسم المستخدم: admin\n'
+                            f'   كلمة المرور: admin123\n'
+                            f'   النطاق: http://{domain}/admin/'
+                        )
+                    else:
+                        messages.warning(
+                            request,
+                            f'⚠️ تم إنشاء Domain بنجاح، لكن فشل إنشاء Admin User تلقائياً.\n'
+                            f'   يمكنك إنشاء Admin User يدوياً من Python Shell.'
+                        )
+            except Exception as e:
+                messages.warning(
+                    request,
+                    f'⚠️ تم إنشاء Domain بنجاح، لكن فشل التحقق من Admin User: {str(e)}\n'
+                    f'   يمكنك إنشاء Admin User يدوياً من Python Shell.'
+                )
 
 
 @admin.register(FarmInfo)
