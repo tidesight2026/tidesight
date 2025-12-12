@@ -116,19 +116,6 @@ if not DEBUG:
                 file=sys.stderr
             )
     
-    # التحقق من STATIC_ROOT و MEDIA_ROOT في الإنتاج
-    static_root = os.getenv('STATIC_ROOT', STATIC_ROOT)
-    media_root = os.getenv('MEDIA_ROOT', MEDIA_ROOT)
-    if static_root == os.path.join(BASE_DIR, 'staticfiles') or media_root == os.path.join(BASE_DIR, 'media'):
-        # استخدام المسارات الافتراضية - قد يكون مشكلة في الإنتاج
-        if os.getenv('ENVIRONMENT') == 'production':
-            print(
-                "\n" + "="*80 + "\n"
-                "⚠️  تحذير: STATIC_ROOT و MEDIA_ROOT يستخدمان المسارات الافتراضية.\n"
-                "⚠️  في الإنتاج، يجب تعيين مسارات منفصلة للـ staticfiles و media.\n"
-                "="*80 + "\n",
-                file=sys.stderr
-            )
 
 # =================================================
 # MULTI-TENANCY CONFIGURATION (نواة النظام)
