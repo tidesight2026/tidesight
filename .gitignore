@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+/media
+/staticfiles
+
+# Environment Variables
+.env
+.env.local
+.env.prod
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Secrets
+secrets/
+*.pem
+*.key
+*.crt
+
+# Backups
+backups/
+*.sql.gz
+*.tar.gz
+
+# SSL Certificates (يجب عدم رفعها)
+nginx/ssl/
+*.pem
+*.key
+*.crt

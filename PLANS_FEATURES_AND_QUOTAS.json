@@ -1,0 +1,212 @@
+{
+  "plans": {
+    "basic": {
+      "name": {
+        "en": "Basic",
+        "ar": "أساسي"
+      },
+      "description": {
+        "en": "Perfect for small farms and individual farmers starting their aquaculture journey",
+        "ar": "مثالي للمزارع الصغيرة والمزارعين الأفراد الذين يبدأون رحلتهم في تربية الأحياء المائية"
+      },
+      "price_monthly": 299.00,
+      "price_yearly": 2990.00,
+      "trial_days": 14,
+      "is_featured": false,
+      "sort_order": 1,
+      "features": {
+        "biological_management": true,
+        "daily_operations": true,
+        "inventory_management": true,
+        "basic_reports": true,
+        "sales_management": true,
+        "advanced_reports": false,
+        "accounting": false,
+        "zatca_integration": false,
+        "iot_integration": false,
+        "api_access": false,
+        "custom_reports": false,
+        "data_export": true,
+        "email_support": true,
+        "priority_support": false,
+        "dedicated_support": false,
+        "white_label": false,
+        "multi_location": false,
+        "audit_logs": false,
+        "backup_restore": false
+      },
+      "quotas": {
+        "max_ponds": 5,
+        "max_users": 3,
+        "max_batches": 20,
+        "max_storage_gb": 10,
+        "max_sales_orders_per_month": 50,
+        "max_invoices_per_month": 50,
+        "api_rate_limit_per_hour": 100,
+        "max_export_records": 1000
+      }
+    },
+    "professional": {
+      "name": {
+        "en": "Professional",
+        "ar": "احترافي"
+      },
+      "description": {
+        "en": "Ideal for growing farms that need advanced features and better support",
+        "ar": "مثالي للمزارع النامية التي تحتاج إلى ميزات متقدمة ودعم أفضل"
+      },
+      "price_monthly": 799.00,
+      "price_yearly": 7990.00,
+      "trial_days": 14,
+      "is_featured": true,
+      "sort_order": 2,
+      "features": {
+        "biological_management": true,
+        "daily_operations": true,
+        "inventory_management": true,
+        "basic_reports": true,
+        "sales_management": true,
+        "advanced_reports": true,
+        "accounting": true,
+        "zatca_integration": true,
+        "iot_integration": true,
+        "api_access": true,
+        "custom_reports": true,
+        "data_export": true,
+        "email_support": true,
+        "priority_support": true,
+        "dedicated_support": false,
+        "white_label": false,
+        "multi_location": true,
+        "audit_logs": true,
+        "backup_restore": true
+      },
+      "quotas": {
+        "max_ponds": 20,
+        "max_users": 10,
+        "max_batches": 100,
+        "max_storage_gb": 50,
+        "max_sales_orders_per_month": 500,
+        "max_invoices_per_month": 500,
+        "api_rate_limit_per_hour": 1000,
+        "max_export_records": 10000
+      }
+    },
+    "enterprise": {
+      "name": {
+        "en": "Enterprise",
+        "ar": "مؤسسي"
+      },
+      "description": {
+        "en": "For large operations requiring unlimited resources, custom solutions, and dedicated support",
+        "ar": "للمؤسسات الكبيرة التي تتطلب موارد غير محدودة وحلول مخصصة ودعم مخصص"
+      },
+      "price_monthly": 1999.00,
+      "price_yearly": 19990.00,
+      "trial_days": 30,
+      "is_featured": false,
+      "sort_order": 3,
+      "features": {
+        "biological_management": true,
+        "daily_operations": true,
+        "inventory_management": true,
+        "basic_reports": true,
+        "sales_management": true,
+        "advanced_reports": true,
+        "accounting": true,
+        "zatca_integration": true,
+        "iot_integration": true,
+        "api_access": true,
+        "custom_reports": true,
+        "data_export": true,
+        "email_support": true,
+        "priority_support": true,
+        "dedicated_support": true,
+        "white_label": true,
+        "multi_location": true,
+        "audit_logs": true,
+        "backup_restore": true
+      },
+      "quotas": {
+        "max_ponds": null,
+        "max_users": null,
+        "max_batches": null,
+        "max_storage_gb": null,
+        "max_sales_orders_per_month": null,
+        "max_invoices_per_month": null,
+        "api_rate_limit_per_hour": null,
+        "max_export_records": null
+      }
+    }
+  },
+  "feature_descriptions": {
+    "en": {
+      "biological_management": "Manage species, batches, ponds, and biological data",
+      "daily_operations": "Record feeding, mortality, water quality, and daily activities",
+      "inventory_management": "Track feed, supplies, and inventory levels",
+      "basic_reports": "Standard reports for batches, ponds, and operations",
+      "sales_management": "Manage harvests, sales orders, and invoices",
+      "advanced_reports": "Advanced analytics, custom KPIs, and detailed insights",
+      "accounting": "Full accounting module with financial reports and transactions",
+      "zatca_integration": "Integration with ZATCA (Saudi Tax Authority) for e-invoicing",
+      "iot_integration": "Connect IoT sensors for real-time monitoring",
+      "api_access": "RESTful API access for integrations and automation",
+      "custom_reports": "Create and customize your own reports",
+      "data_export": "Export data to Excel, CSV, and PDF formats",
+      "email_support": "Email support during business hours",
+      "priority_support": "Priority email and phone support with faster response times",
+      "dedicated_support": "Dedicated account manager and 24/7 support",
+      "white_label": "Custom branding and white-label options",
+      "multi_location": "Manage multiple farm locations from one account",
+      "audit_logs": "Complete audit trail of all system activities",
+      "backup_restore": "Automated backups and restore capabilities"
+    },
+    "ar": {
+      "biological_management": "إدارة الأنواع والدفعات والبرك والبيانات البيولوجية",
+      "daily_operations": "تسجيل التغذية والوفيات وجودة المياه والأنشطة اليومية",
+      "inventory_management": "تتبع الأعلاف والمستلزمات ومستويات المخزون",
+      "basic_reports": "تقارير قياسية للدفعات والبرك والعمليات",
+      "sales_management": "إدارة الحصاد وأوامر البيع والفواتير",
+      "advanced_reports": "تحليلات متقدمة ومؤشرات أداء مخصصة ورؤى مفصلة",
+      "accounting": "وحدة محاسبة كاملة مع التقارير المالية والمعاملات",
+      "zatca_integration": "التكامل مع هيئة الزكاة والضريبة السعودية للفواتير الإلكترونية",
+      "iot_integration": "ربط أجهزة استشعار إنترنت الأشياء للمراقبة في الوقت الفعلي",
+      "api_access": "الوصول إلى واجهة برمجة التطبيقات RESTful للتكاملات والأتمتة",
+      "custom_reports": "إنشاء وتخصيص تقاريرك الخاصة",
+      "data_export": "تصدير البيانات إلى تنسيقات Excel و CSV و PDF",
+      "email_support": "دعم عبر البريد الإلكتروني خلال ساعات العمل",
+      "priority_support": "دعم بريد إلكتروني وهاتفي ذو أولوية مع أوقات استجابة أسرع",
+      "dedicated_support": "مدير حساب مخصص ودعم على مدار الساعة",
+      "white_label": "خيارات العلامة التجارية المخصصة والعلامة البيضاء",
+      "multi_location": "إدارة مواقع المزارع المتعددة من حساب واحد",
+      "audit_logs": "سجل تدقيق كامل لجميع أنشطة النظام",
+      "backup_restore": "نسخ احتياطي تلقائي وقدرات الاستعادة"
+    }
+  },
+  "quota_descriptions": {
+    "en": {
+      "max_ponds": "Maximum number of ponds",
+      "max_users": "Maximum number of active users",
+      "max_batches": "Maximum number of active batches",
+      "max_storage_gb": "Maximum storage space in GB",
+      "max_sales_orders_per_month": "Maximum sales orders per month",
+      "max_invoices_per_month": "Maximum invoices per month",
+      "api_rate_limit_per_hour": "API requests per hour",
+      "max_export_records": "Maximum records per export"
+    },
+    "ar": {
+      "max_ponds": "الحد الأقصى لعدد البرك",
+      "max_users": "الحد الأقصى لعدد المستخدمين النشطين",
+      "max_batches": "الحد الأقصى لعدد الدفعات النشطة",
+      "max_storage_gb": "الحد الأقصى لمساحة التخزين بالجيجابايت",
+      "max_sales_orders_per_month": "الحد الأقصى لأوامر البيع شهرياً",
+      "max_invoices_per_month": "الحد الأقصى للفواتير شهرياً",
+      "api_rate_limit_per_hour": "طلبات API في الساعة",
+      "max_export_records": "الحد الأقصى للسجلات لكل تصدير"
+    }
+  },
+  "notes": {
+    "en": "Set quota values to null for unlimited access. All prices are in Saudi Riyal (SAR).",
+    "ar": "ضع قيم الحصص على null للوصول غير المحدود. جميع الأسعار بالريال السعودي (SAR)."
+  }
+}

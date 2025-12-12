@@ -1,0 +1,115 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "actions": "Actions"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "username": "Username",
+    "password": "Password",
+    "loginSuccess": "Login successful",
+    "loginError": "Login failed",
+    "invalidCredentials": "Invalid username or password"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "totalPonds": "Total Ponds",
+    "activeBatches": "Active Batches",
+    "totalBiomass": "Total Biomass",
+    "mortalityRate": "Mortality Rate",
+    "feedValue": "Feed Inventory Value",
+    "medicineValue": "Medicine Inventory Value",
+    "recentActivity": "Recent Activity",
+    "noRecentActivity": "No recent activity",
+    "noActivityDescription": "Activities will appear here when you start using the system"
+  },
+  "ponds": {
+    "title": "Ponds",
+    "addPond": "Add New Pond",
+    "editPond": "Edit Pond",
+    "deletePond": "Delete Pond",
+    "pondName": "Pond Name",
+    "pondType": "Pond Type",
+    "capacity": "Capacity",
+    "location": "Location",
+    "notes": "Notes"
+  },
+  "batches": {
+    "title": "Batches",
+    "addBatch": "Add New Batch",
+    "batchNumber": "Batch Number",
+    "species": "Species",
+    "pond": "Pond",
+    "initialCount": "Initial Count",
+    "currentCount": "Current Count",
+    "status": "Status"
+  },
+  "inventory": {
+    "title": "Inventory",
+    "feeds": "Feeds",
+    "medicines": "Medicines",
+    "addFeed": "Add Feed",
+    "addMedicine": "Add Medicine",
+    "quantity": "Quantity",
+    "unitPrice": "Unit Price",
+    "totalValue": "Total Value"
+  },
+  "operations": {
+    "title": "Daily Operations",
+    "feeding": "Feeding",
+    "mortality": "Mortality",
+    "feedingDate": "Feeding Date",
+    "mortalityDate": "Mortality Date",
+    "count": "Count",
+    "cause": "Cause"
+  },
+  "sales": {
+    "title": "Sales",
+    "harvests": "Harvests",
+    "salesOrders": "Sales Orders",
+    "invoices": "Invoices",
+    "customerName": "Customer Name",
+    "orderDate": "Order Date",
+    "invoiceNumber": "Invoice Number",
+    "totalAmount": "Total Amount"
+  },
+  "accounting": {
+    "title": "Accounting",
+    "accounts": "Accounts",
+    "journalEntries": "Journal Entries",
+    "trialBalance": "Trial Balance",
+    "balanceSheet": "Balance Sheet",
+    "accountCode": "Account Code",
+    "accountName": "Account Name",
+    "debit": "Debit",
+    "credit": "Credit"
+  },
+  "validation": {
+    "required": "This field is required",
+    "min": "Value is too small",
+    "max": "Value is too large",
+    "email": "Invalid email address",
+    "positive": "Value must be greater than zero",
+    "invalidNumber": "Must be a number"
+  }
+}
+

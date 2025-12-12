@@ -1,0 +1,130 @@
+═══════════════════════════════════════════════════════════════════════════════
+  AquaERP - JSON منسق للقراءة (للمراجعة فقط)
+  Formatted JSON for Reading (Reference Only)
+═══════════════════════════════════════════════════════════════════════════════
+
+ملاحظة: هذا الملف للقراءة فقط. استخدم PLANS_JSON_FOR_ADMIN.txt للنسخ واللصق
+Note: This file is for reading only. Use PLANS_JSON_FOR_ADMIN.txt for copy/paste
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 1. الباقة الأساسية / BASIC PLAN                                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Features (الميزات):
+{
+  "biological_management": true,
+  "daily_operations": true,
+  "inventory_management": true,
+  "basic_reports": true,
+  "sales_management": true,
+  "advanced_reports": false,
+  "accounting": false,
+  "zatca_integration": false,
+  "iot_integration": false,
+  "api_access": false,
+  "custom_reports": false,
+  "data_export": true,
+  "email_support": true,
+  "priority_support": false,
+  "dedicated_support": false,
+  "white_label": false,
+  "multi_location": false,
+  "audit_logs": false,
+  "backup_restore": false
+}
+
+Quotas (القيود):
+{
+  "max_ponds": 5,
+  "max_users": 3,
+  "max_batches": 20,
+  "max_storage_gb": 10,
+  "max_sales_orders_per_month": 50,
+  "max_invoices_per_month": 50,
+  "api_rate_limit_per_hour": 100,
+  "max_export_records": 1000
+}
+
+═══════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 2. الباقة الاحترافية / PROFESSIONAL PLAN ⭐                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Features (الميزات):
+{
+  "biological_management": true,
+  "daily_operations": true,
+  "inventory_management": true,
+  "basic_reports": true,
+  "sales_management": true,
+  "advanced_reports": true,
+  "accounting": true,
+  "zatca_integration": true,
+  "iot_integration": true,
+  "api_access": true,
+  "custom_reports": true,
+  "data_export": true,
+  "email_support": true,
+  "priority_support": true,
+  "dedicated_support": false,
+  "white_label": false,
+  "multi_location": true,
+  "audit_logs": true,
+  "backup_restore": true
+}
+
+Quotas (القيود):
+{
+  "max_ponds": 20,
+  "max_users": 10,
+  "max_batches": 100,
+  "max_storage_gb": 50,
+  "max_sales_orders_per_month": 500,
+  "max_invoices_per_month": 500,
+  "api_rate_limit_per_hour": 1000,
+  "max_export_records": 10000
+}
+
+═══════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 3. الباقة المؤسسية / ENTERPRISE PLAN                                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Features (الميزات):
+{
+  "biological_management": true,
+  "daily_operations": true,
+  "inventory_management": true,
+  "basic_reports": true,
+  "sales_management": true,
+  "advanced_reports": true,
+  "accounting": true,
+  "zatca_integration": true,
+  "iot_integration": true,
+  "api_access": true,
+  "custom_reports": true,
+  "data_export": true,
+  "email_support": true,
+  "priority_support": true,
+  "dedicated_support": true,
+  "white_label": true,
+  "multi_location": true,
+  "audit_logs": true,
+  "backup_restore": true
+}
+
+Quotas (القيود):
+{
+  "max_ponds": null,
+  "max_users": null,
+  "max_batches": null,
+  "max_storage_gb": null,
+  "max_sales_orders_per_month": null,
+  "max_invoices_per_month": null,
+  "api_rate_limit_per_hour": null,
+  "max_export_records": null
+}
+
+═══════════════════════════════════════════════════════════════════════════════
