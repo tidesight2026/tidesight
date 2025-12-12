@@ -34,7 +34,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        - VITE_API_BASE_URL=https://tidesight.cloud
+        - VITE_API_BASE_URL=http://tidesight.doud
     ports:
       - "8080:80"
     depends_on:
