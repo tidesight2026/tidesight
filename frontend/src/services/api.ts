@@ -32,12 +32,12 @@ import type {
   AuditLog,
   BiologicalAssetRevaluation,
   SubscriptionInfo,
+  SubscriptionPlan,
   UsageStats,
   SubscriptionInvoice,
   TenantSummary,
   SaaSStats,
   FarmInfo,
-  User,
 } from '../types'
 
 class ApiService {

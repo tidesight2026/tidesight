@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import Layout from '../components/layout/Layout'
 import Card from '../components/common/Card'
 import { apiService } from '../services/api'
-import type { BatchPerformance, BatchPerformanceItem } from '../types'
+import type { BatchPerformance } from '../types'
 import LoadingSpinner from '../components/common/LoadingSpinner'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
 export default function BatchPerformance() {
-  const { t } = useTranslation()
   const [data, setData] = useState<BatchPerformance | null>(null)
   const [loading, setLoading] = useState(true)
 

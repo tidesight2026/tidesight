@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import Layout from '../components/layout/Layout'
 import Card from '../components/common/Card'
 import { apiService } from '../services/api'
 import type { FarmOverview } from '../types'
 import LoadingSpinner from '../components/common/LoadingSpinner'
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
 export default function FarmOverview() {
-  const { t } = useTranslation()
   const [data, setData] = useState<FarmOverview | null>(null)
   const [loading, setLoading] = useState(true)
 

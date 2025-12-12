@@ -125,18 +125,18 @@ export default function Settings() {
                         <td className="px-4 py-2">
                           <span
                             className={`px-2 py-1 text-xs rounded ${
-                              u.is_active ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'
+                              (u.is_active ?? true) ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'
                             }`}
                           >
-                            {u.is_active ? 'نشط' : 'موقوف'}
+                            {(u.is_active ?? true) ? 'نشط' : 'موقوف'}
                           </span>
                         </td>
                         <td className="px-4 py-2">
                           <button
-                            onClick={() => handleToggleActive(u.id, !u.is_active)}
+                            onClick={() => handleToggleActive(u.id, !(u.is_active ?? true))}
                             className="text-sm text-primary-600 hover:underline"
                           >
-                            {u.is_active ? 'إيقاف' : 'تفعيل'}
+                            {(u.is_active ?? true) ? 'إيقاف' : 'تفعيل'}
                           </button>
                         </td>
                       </tr>

@@ -104,7 +104,7 @@ export default function FeedingLogForm({
               </option>
             ))}
         </select>
-        {feedTypes.filter((f) => f.is_active !== false).length === 0 && (
+        {feedTypes.filter((f) => (f.is_active ?? true) !== false).length === 0 && (
           <p className="text-xs text-gray-500 mt-1">لا توجد أنواع أعلاف متاحة. يرجى إضافة أنواع أعلاف من صفحة المخزون.</p>
         )}
       </FormField>

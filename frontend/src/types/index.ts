@@ -5,6 +5,7 @@ export interface User {
   full_name: string
   role: string
   is_staff: boolean
+  is_active?: boolean
 }
 
 export interface LoginCredentials {
@@ -193,6 +194,7 @@ export interface FeedType {
   arabic_name: string
   protein_percentage?: number
   unit: string
+  is_active?: boolean
 }
 
 export interface FeedInventory {
