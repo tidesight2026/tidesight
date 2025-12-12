@@ -4,7 +4,7 @@ import Card from '../components/common/Card'
 import { apiService } from '../services/api'
 import type { BatchPerformance } from '../types'
 import LoadingSpinner from '../components/common/LoadingSpinner'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts'
 
 export default function BatchPerformance() {
   const [data, setData] = useState<BatchPerformance | null>(null)
