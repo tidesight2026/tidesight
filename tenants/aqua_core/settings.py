@@ -20,6 +20,8 @@ default_allowed_hosts = [
     'tmco.localhost',
     'tidesight.cloud',
     'www.tidesight.cloud',
+    'tidesight.doud',
+    'www.tidesight.doud',
 ]
 env_allowed_hosts = os.getenv('ALLOWED_HOSTS', '')
 if env_allowed_hosts:
@@ -30,6 +32,8 @@ if env_allowed_hosts:
         'tmco.localhost',
         'tidesight.cloud',
         'www.tidesight.cloud',
+        'tidesight.doud',
+        'www.tidesight.doud',
     ])  # إضافة tenant domains
     # إضافة أي domain يحتوي على .localhost (للتطوير)
     all_hosts.add('*.localhost')  # للتوثيق فقط - Django لا يدعم wildcards
